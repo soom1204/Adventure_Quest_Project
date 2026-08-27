@@ -1,0 +1,1495 @@
+{
+  "INITIAL_STATE": {
+    "hp": 100,
+    "resolve": 100,
+    "morality": 50
+  },
+  "NODES": {
+    "intro": {
+      "title": "Prologue: The Echoes of Aethelgard",
+      "bg_image": "INTRO_STATE",
+      "is_intro": true,
+      "dialogue_sequence": [
+        {
+          "speaker": "narration",
+          "text": "The year is 2026. Aethelgard, the shining pinnacle of the old world, has fallen completely silent behind locked iron gates."
+        },
+        {
+          "speaker": "narration",
+          "text": "Rumors speak of a sudden psychological madness that consumed the kingdom within, leaving behind nothing but ruins and desperate survivors."
+        },
+        {
+          "speaker": "narration",
+          "text": "You are an Investigator. Your mission: navigate the fading paths, face the moral weights of those left behind, and uncover the truth."
+        },
+        {
+          "speaker": "narration",
+          "text": "Every decision you make will constrain your state-space. Protecting your morality will drain your physical endurance. Choose wisely."
+        }
+      ],
+      "next_node": "1"
+    },
+    "1": {
+      "title": "The Silent Gates",
+      "bg_image": "bg_1_silent_gates.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_base.png",
+          "text": "The iron gates are colder than I expected. The wind passing through these stone arches smells like ozone and damp soil."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Aethelgard. Standing before what's left of it... you'd never guess thousands of people lived here just weeks ago."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Wait. I hear shouting near the entry wall. Someone is still alive."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Captain Vance",
+          "character": "ch_guard_base.png",
+          "text": "Hey! You there with the coat! Step away from those lower grates. If you want to survive, follow me up the sunlit upper walls. It's clean and unblocked!"
+        },
+        {
+          "speaker": "npc2",
+          "name": "Elian the Archivist",
+          "character": "ch_archivist_base.png",
+          "text": "Do not listen to that deserter, traveler! The upper masonry is completely unstable. Help me carry these historical archives through the aqueducts instead!"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Captain Vance",
+          "character": "ch_guard_paranoid.png",
+          "text": "I know every stone in this city, old man. I mapped the patrol routes for twelve years. The aqueducts are flooded and toxic."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Elian the Archivist",
+          "character": "ch_archivist_sorrowful.png",
+          "text": "And I spent thirty years cataloging every text in that archive. Without them, the world will never know what happened here."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Both paths look dangerous. The guard seems confident, but he abandoned his post. The archivist is honest, but he moves slowly. Who do I trust?"
+        }
+      ],
+      "choice_a": {
+        "text": "Trust Captain Vance and take the sunlit upper walls.",
+        "next_node": "1a",
+        "stat_changes": {
+          "hp": 10,
+          "resolve": 10,
+          "morality": -15
+        },
+        "char_expression": "ch_guard_smug.png"
+      },
+      "choice_b": {
+        "text": "Trust Elian and help him carry the heavy archives.",
+        "next_node": "1b",
+        "stat_changes": {
+          "hp": -20,
+          "resolve": -10,
+          "morality": 20
+        },
+        "char_expression": "ch_archivist_sorrowful.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "npc1",
+          "name": "Captain Vance",
+          "character": "ch_guard_smug.png",
+          "text": "Smart choice, traveler. Keep up and watch your footing on the upper stones."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Vance moves quickly. As we climb the sunlit ramp, I hear the archivist shouting something behind us..."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Wait... he's gone quiet. Vance, did you close the lower gate? The one leading to the aqueducts?"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Captain Vance",
+          "character": "ch_guard_paranoid.png",
+          "text": "That gate was going to collapse anyway. I just sped up the process. Don't look back. We're alive. That's what matters."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "My morality weighs on me, but the path ahead is clear and warm. I can't go back now."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "npc2",
+          "name": "Elian the Archivist",
+          "character": "ch_archivist_serene.png",
+          "text": "Thank you, traveler. These records contain the voices of a thousand scholars. They deserve to be carried out."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The archives are brutally heavy. Each step through the lower grates tears at my shoulders. The stone is slick and jagged."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "My hands are bleeding from the iron edges. But the archivist is smiling... he's humming an old song."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Elian the Archivist",
+          "character": "ch_archivist_serene.png",
+          "text": "You have a good heart, Investigator. Not many would carry a dead man's words through a dying city."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "We push deeper into the dark tunnels. My body aches, but at least I know I did the right thing... I think."
+        }
+      ]
+    },
+    "1a": {
+      "title": "The Sunlit Courtyard",
+      "bg_image": "bg_1a_sunlit_courtyard.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The path up here is warm, sunlight streaming through shattered stained glass. But the gate behind us is sealed shut."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The archivist... he was right behind us. I heard him calling out. And now silence. Vance, you monster."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Chancellor Malakor",
+          "character": "ch_chancellor_base.png",
+          "text": "Help... please... The ceiling gave way when the structural pillars split. I'm pinned under this stone rubble... I can't breathe..."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "That's the King's Chancellor. Malakor. I'd recognize that silk robe anywhere. He's crushed under a collapsed pillar."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_base.png",
+          "text": "Psst! Leave that old politician to rot, traveler. He hoarded food while the people starved. Follow me and I'll open the secret royal armory for you."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Chancellor Malakor",
+          "character": "ch_chancellor_pleading.png",
+          "text": "Don't listen to him... I have information about why the city fell. Please... I can barely feel my legs..."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "Information doesn't fill your stomach, traveler. The armory has weapons, food, armor. Help me, and you walk out of here loaded."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The chancellor knows why Aethelgard fell. But he's pinned under tons of stone. Lifting that pillar will cost me everything. The rebel's path is easy... but at what cost?"
+        }
+      ],
+      "choice_a": {
+        "text": "Heave the heavy stone pillar to save Chancellor Malakor.",
+        "next_node": "1a1",
+        "stat_changes": {
+          "hp": -25,
+          "resolve": -15,
+          "morality": 25
+        },
+        "char_expression": "ch_chancellor_pleading.png"
+      },
+      "choice_b": {
+        "text": "Abandon Malakor and follow Garrick to the armory.",
+        "next_node": "1a2",
+        "stat_changes": {
+          "hp": 15,
+          "resolve": 20,
+          "morality": -20
+        },
+        "char_expression": "ch_rebel_scheming.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*straining* The pillar... won't... budge... Come on! Almost... there!"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Chancellor Malakor",
+          "character": "ch_chancellor_relieved.png",
+          "text": "Gods... you actually did it. My ribs are cracked, but I can move. Thank you, Investigator. I owe you my life."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "My shoulder is screaming. Blood is running down my arm. But Malakor is alive. He's reaching into his robe..."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Chancellor Malakor",
+          "character": "ch_chancellor_relieved.png",
+          "text": "Take this map. It shows the old dungeons beneath the city. The truth about the quarantine is buried down there."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The floor just cracked beneath us. The pillar I moved was load-bearing. We need to move. Now."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "npc2",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "Good call, traveler. That old fossil had it coming. Follow me, the armory entrance is just through this corridor."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "As we walk away, I hear Malakor's voice fading behind us. 'Please... don't leave me...' I keep walking."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Chancellor Malakor",
+          "character": "ch_chancellor_pleading.png",
+          "text": "*fading* Someone... anyone... please... I have the quarantine codes... I know why we locked ourselves in..."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The corridor goes quiet. My resolve hardens, but something in my chest feels hollow. The armory is just ahead."
+        }
+      ]
+    },
+    "1b": {
+      "title": "The Collapsed Aqueducts",
+      "bg_image": "bg_1b_collapsed_aqueducts.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "These stone tunnels are pitch black. My boots are soaking wet and my hands are cut up from the iron edges."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The archivist managed to light an oil lamp. The glow reveals a massive underground waterway... mostly collapsed."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_base.png",
+          "text": "*Groans* Damn iron scraps... I'm bleeding out here. Give me that medical bandage from your pack, traveler, and I'll map out a route straight to a pristine vault."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Kira the Herbalist",
+          "character": "ch_herbalist_base.png",
+          "text": "Cold... so cold... The air down here is toxic... please... I just need something to bind my wounds..."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_pain.png",
+          "text": "Don't waste it on her, traveler. She's delirious. She won't last the night anyway. I can get us BOTH out alive."
+        },
+        {
+          "speaker": "npc2",
+          "name": "Kira the Herbalist",
+          "character": "ch_herbalist_confused.png",
+          "text": "I... I can still help. I know which roots are safe to eat. Without me, you'll starve in the lower tunnels..."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "One bandage. That's all I have left. The smuggler offers a shortcut out. The herbalist offers survival knowledge. But only one of them can be saved."
+        }
+      ],
+      "choice_a": {
+        "text": "Give your final bandage to the shivering Herbalist.",
+        "next_node": "1b1",
+        "stat_changes": {
+          "hp": -15,
+          "resolve": -20,
+          "morality": 20
+        },
+        "char_expression": "ch_herbalist_grateful.png"
+      },
+      "choice_b": {
+        "text": "Bandage the Smuggler to secure the route to the vault.",
+        "next_node": "1b2",
+        "stat_changes": {
+          "hp": 20,
+          "resolve": 15,
+          "morality": -25
+        },
+        "char_expression": "ch_smuggler_confident.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "npc2",
+          "name": "Kira the Herbalist",
+          "character": "ch_herbalist_grateful.png",
+          "text": "You... you saved me. I won't forget this. Let me bind your wounds too. These roots can slow the bleeding."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Kira's hands are shaking, but she works quickly. The herbal paste stings but it helps. Sylas just watches from the shadows."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_pain.png",
+          "text": "You'll regret that choice, traveler. The tunnels ahead are a maze. Without my map, you'll wander until you drop."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Maybe. But Kira is alive. And she knows these tunnels better than any smuggler's map. We push forward together."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_confident.png",
+          "text": "Now that's the smart play. Give me a minute to patch up... there. Good as new. Follow me, I know a shortcut."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Behind us, Kira has gone silent. I turn to look... her breathing is shallow. Her skin is gray."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "She's still alive, but barely. Sylas doesn't look back. 'She made her choice,' he says. No. I made her choice."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The vault route is clean and well-lit. My body recovers quickly on this path. But the image of her face won't leave my mind."
+        }
+      ]
+    },
+    "1a1": {
+      "title": "The Ruined Dungeons",
+      "bg_image": "bg_1a1_ruined_dungeons.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Lifting that pillar tore my shoulder apart. And now the floor gave way. We're stuck in the subterranean cells."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Malakor is limping beside me. The dungeons stretch out in every direction. Dripping water. Rusting chains."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Jax the Prisoner",
+          "character": "ch_prisoner_base.png",
+          "text": "Heehee! Fresh meat in the catacombs! I know why the king locked the vaults! I saw the madness firsthand! Pull that rusty lever and let me out!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "A man behind iron bars. His eyes are wild, unfocused. But he keeps muttering about 'the quarantine' and 'the king's secret.'"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Jax the Prisoner",
+          "character": "ch_prisoner_terrified.png",
+          "text": "I was the king's personal guard. I saw what they did to the people in the quarantine ward. They locked us in with the madness!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "If he's telling the truth, he knows the final secret of Aethelgard. But if he's dangerous, freeing him could be fatal."
+        }
+      ],
+      "choice_a": {
+        "text": "Pull the lever to free Jax and demand the full truth.",
+        "next_node": "1a1a",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": 20,
+          "morality": 10
+        },
+        "char_expression": "ch_prisoner_terrified.png"
+      },
+      "choice_b": {
+        "text": "Leave Jax locked away. His mind is too broken to trust.",
+        "next_node": "1a1b",
+        "stat_changes": {
+          "hp": 10,
+          "resolve": -15,
+          "morality": -15
+        },
+        "char_expression": "ch_prisoner_calculating.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*Clank* The rusted lever groans. The cell door swings open. Jax stumbles out, blinking in the dim light."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Jax the Prisoner",
+          "character": "ch_prisoner_calculating.png",
+          "text": "The king didn't just lock the gates. He sealed the quarantine ward from the inside. Hundreds of people... trapped with the infected."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Jax's eyes sharpen. For a moment, the madness lifts. He's lucid. Terrified, but lucid."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Jax the Prisoner",
+          "character": "ch_prisoner_terrified.png",
+          "text": "There's a tunnel behind the east wall. It leads straight to the quarantine boundary. But Investigator... you won't like what you find there."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "He darts into the shadows before I can respond. The east wall... there IS a passage behind the broken stones."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I shake my head. Jax's mind is too far gone. His screams echo behind me as we move deeper into the cells."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Jax the Prisoner",
+          "character": "ch_prisoner_calculating.png",
+          "text": "*screaming* You're making a mistake! You'll die in here without me! The quarantine codes are in my head!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Malakor tugs my sleeve. 'There's another passage. Through the ventilation shaft. I can see light.'"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Jax's voice fades behind us. I tell myself I made the right call. His screams say otherwise."
+        }
+      ]
+    },
+    "1a2": {
+      "title": "The Gilded Armory",
+      "bg_image": "bg_1a2_gilded_armory.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "This gear is incredible. Chainmail, steel greaves, rations... My stamina is recovering just eating the preserved food."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Garrick is already strapping on armor. He moves like he's done this before. Like he planned for this."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "Perfect. Now help me break these wooden support pillars. We'll cave the roof in so no other scavengers can follow us and take our weapons!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Destroy the armory? Other survivors might need this equipment. But if I refuse, Garrick might turn on me."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_furious.png",
+          "text": "Don't give me that look. I watched the nobles hoard this while children starved in the streets. This armor is OURS now."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "He has a point about the nobles. But collapsing the roof could kill anyone who comes after us. And it'll echo through the entire city."
+        }
+      ],
+      "choice_a": {
+        "text": "Restrain Garrick to preserve the armory for other survivors.",
+        "next_node": "1a2a",
+        "stat_changes": {
+          "hp": -20,
+          "resolve": -15,
+          "morality": 25
+        },
+        "char_expression": "ch_rebel_furious.png"
+      },
+      "choice_b": {
+        "text": "Help Garrick collapse the armory to secure exclusive loot.",
+        "next_node": "1a2b",
+        "stat_changes": {
+          "hp": 25,
+          "resolve": 15,
+          "morality": -30
+        },
+        "char_expression": "ch_rebel_scheming.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*struggling* Stay DOWN, Garrick! I'm not letting you bring the ceiling down on everyone who comes after us!"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_furious.png",
+          "text": "You're protecting the nobles! Even now! After everything they did! You're no different from them!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "He fights hard. A fist catches my jaw. But I hold him down long enough for the rage to pass. He goes limp."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "*breathing hard* Fine. Keep your precious armory. But the structural damage is done. We need to move before this place collapses anyway."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "He's right. Cracks are spreading across the ceiling. The support arches are compromised. We need to find another way out."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "*smashing* Yes! That's it! One more pillar! Give it everything you've got!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*CRACK* The last support pillar splinters. The ceiling groans. Dust and debris rain down as the armory caves in behind us."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Garrick the Rebel",
+          "character": "ch_rebel_scheming.png",
+          "text": "Beautiful. No one will ever strip those weapons from the dead nobles now. We walk out of here kings."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The echo of the collapse rolls through the city. Somewhere, someone might have needed those weapons. The thought sits heavy."
+        }
+      ]
+    },
+    "1b1": {
+      "title": "The Toxic Gardens",
+      "bg_image": "bg_1b1_toxic_gardens.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*Coughs* This air... the overgrown yellow roots are breathing out some kind of acidic spore. My throat burns."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Kira identifies the safe plants, but the toxic ones are everywhere. Without water, we won't last another hour."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Hugo the Thief",
+          "character": "ch_thief_base.png",
+          "text": "Get away! This is the last clean water barrel in the greenhouse! If I share it, I won't have enough to make it past the valley gates!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "A young man, barely twenty, clutching a dented water barrel like it's gold. His lips are cracked. He's desperate."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Hugo the Thief",
+          "character": "ch_thief_defensive.png",
+          "text": "I found it first! That's the law out here now. Finders keepers. You want water? Find your own!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "He's shaking. Not from aggression... from fear. He's just as scared as I am. But if we don't get water, Kira and I are done."
+        }
+      ],
+      "choice_a": {
+        "text": "Wrestle the water barrel away from Hugo to share it.",
+        "next_node": "1b1a",
+        "stat_changes": {
+          "hp": 15,
+          "resolve": -10,
+          "morality": -15
+        },
+        "char_expression": "ch_thief_defensive.png"
+      },
+      "choice_b": {
+        "text": "Let Hugo keep the water. We'll find another way through the gardens.",
+        "next_node": "1b1b",
+        "stat_changes": {
+          "hp": -30,
+          "resolve": -20,
+          "morality": 30
+        },
+        "char_expression": "ch_thief_guilt.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I reach for the barrel. Hugo swings. I catch his wrist. He's thin, malnourished. It's barely a struggle."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Hugo the Thief",
+          "character": "ch_thief_defensive.png",
+          "text": "*crying* Please... I haven't eaten in three days... That's all I have... please..."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I take the barrel. Hugo collapses to his knees. Kira drinks first, then hands it to me. The water is warm and tastes like metal."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "We leave Hugo sitting in the toxic spores. I don't look back. I can't. The sluice gate is ahead. We push through."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Keep it. We'll manage. Kira, can you identify any water-bearing roots? Anything?"
+        },
+        {
+          "speaker": "npc1",
+          "name": "Hugo the Thief",
+          "character": "ch_thief_guilt.png",
+          "text": "You... you're just leaving? I thought you were going to take it. Everyone takes everything here."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Kira finds a few moisture-rich roots. They're bitter, barely hydrating. My head is spinning. Every step forward takes three tries."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Behind us, Hugo shouts something. An apology? A warning? I can't hear anymore. The dehydration is closing in."
+        }
+      ]
+    },
+    "1b2": {
+      "title": "The Secret Vault",
+      "bg_image": "bg_1b2_secret_vault.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "So this is the hidden inner archive. The files are pristine, completely untouched by the mold. Thousands of documents."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Sylas moves through the vault like he's been here before. He knows exactly where to look."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_confident.png",
+          "text": "Look at these census records! We can sell these royal family bloodlines to external blackmailers for a fortune. Help me load them, and you get half."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The records contain names, addresses, family connections of every citizen in Aethelgard. In the wrong hands, this could destroy lives."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_confident.png",
+          "text": "Don't look at me like that, Investigator. Knowledge is currency. And we're sitting on a fortune."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Behind me, I notice an oil lantern on a shelf. One spark and all of this burns. No one gets exploited. But Sylas would never forgive me."
+        }
+      ],
+      "choice_a": {
+        "text": "Help Sylas pack the census files for guaranteed wealth.",
+        "next_node": "1b2a",
+        "stat_changes": {
+          "hp": 10,
+          "resolve": 25,
+          "morality": -25
+        },
+        "char_expression": "ch_smuggler_confident.png"
+      },
+      "choice_b": {
+        "text": "Knock over the oil lantern to burn the records and prevent exploitation.",
+        "next_node": "1b2b",
+        "stat_changes": {
+          "hp": -15,
+          "resolve": -15,
+          "morality": 25
+        },
+        "char_expression": "ch_smuggler_pain.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_confident.png",
+          "text": "That's the spirit! Load the cart with the birth records first. Those fetch the highest price outside the walls."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I stack the documents into the cart. Each bundle has a family name. A mother. A father. Children. All reduced to merchandise."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_confident.png",
+          "text": "Half of this is yours, Investigator. You'll never need to work again. The exit is through the furnace corridor. Let's move."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "My pack is heavy with stolen lives. Sylas is already heading for the exit. The furnace corridor glows faintly ahead."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "*CRASH* The oil lantern shatters. Flames race across the dry parchment. Sylas screams."
+        },
+        {
+          "speaker": "npc1",
+          "name": "Sylas the Smuggler",
+          "character": "ch_smuggler_pain.png",
+          "text": "WHAT HAVE YOU DONE?! Those records were worth a fortune! You just burned our escape route!"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The fire spreads fast. Smoke fills the vault. The furnace corridor is the only way out now. Sylas is furious, but he follows."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The heat is suffocating, but behind me the flames consume thousands of names that will never be used against anyone. It hurts. But it's right."
+        }
+      ]
+    },
+    "1a1a": {
+      "title": "The Deep Catacombs",
+      "bg_image": "bg_1a1a_deep_catacombs.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Jax's tunnel opens into a vast underground chamber. The walls are covered in scratch marks. Hundreds of them."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "These aren't decorative. People clawed at these walls. Trying to get out. This is where they held the infected."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The tunnel splits ahead. To the left, a narrow crack in the stone. To the right, the main corridor leads upward toward the throne room."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Scratched into the left wall, someone carved: 'The truth is behind the throne.' My body is failing. But the answer is close."
+        }
+      ],
+      "choice_a": {
+        "text": "Take the narrow crack toward the throne room directly.",
+        "next_node": "ending_1",
+        "stat_changes": {
+          "hp": -5,
+          "resolve": 5,
+          "morality": -5
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Search the quarantine scratchings for more answers first.",
+        "next_node": "ending_1",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": 10,
+          "morality": 5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I squeeze through the crack. Stone scrapes my wounds open. But ahead, I see torchlight. The throne room."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The air changes. Warmer. Cleaner. The smells of rot and death fade. I'm ascending toward the heart of Aethelgard."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I run my fingers along the scratch marks. Names. Dates. Final messages. 'Remember us.' 'We didn't deserve this.'"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The weight of a hundred deaths presses on my chest. But through the exhaustion, a staircase appears. It leads to the throne room."
+        }
+      ]
+    },
+    "1a1b": {
+      "title": "The Quarantine Boundary",
+      "bg_image": "bg_1a1b_quarantine_boundary.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I left Jax behind. The air is deathly silent here, blocked by a massive iron barrier stamped with faded contagion hazard marks."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Malakor is reading the quarantine logs on the wall. His face is white. 'Sealed from the inside,' he whispers."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Two paths remain. The quarantine lock mechanism, or the medical records etched into the iron walls."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The lock could open a direct route through. The medical records might reveal the full truth of what happened here."
+        }
+      ],
+      "choice_a": {
+        "text": "Force the quarantine lock to break through to the inner city.",
+        "next_node": "ending_2",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": 5,
+          "morality": -5
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Read every medical record to understand the full quarantine story.",
+        "next_node": "ending_2",
+        "stat_changes": {
+          "hp": -5,
+          "resolve": 10,
+          "morality": 5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*BANG* The lock mechanism gives way. The iron barrier groans open. Beyond it, I can see the inner structures of the city."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Malakor steadies himself against the wall. 'We're inside the quarantine zone now. There's no going back.'"
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I trace every line. The quarantine wasn't just containment. They sealed the ward to protect the OUTSIDE world from the madness within."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Hundreds of innocent people were sacrificed to keep the plague from spreading. The king chose the many over the few. The records end there."
+        }
+      ]
+    },
+    "1a2a": {
+      "title": "The Structural Core",
+      "bg_image": "bg_1a2a_structural_core.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Fighting Garrick left me winded. The support arches up ahead are cracking rapidly under the shifting weight of the upper city."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "This is the skeleton of Aethelgard. Every crack echoes through the walls like the city is screaming."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Malakor points to a narrow maintenance ladder bolted to the left wall. On the right, a crumbling staircase leads down to the quarantine level."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The ladder leads up to the throne room. The staircase leads to answers. But my body is failing."
+        }
+      ],
+      "choice_a": {
+        "text": "Climb the maintenance ladder toward the throne room.",
+        "next_node": "ending_2",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": 5,
+          "morality": -5
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Descend the crumbling staircase to the quarantine level.",
+        "next_node": "ending_2",
+        "stat_changes": {
+          "hp": -15,
+          "resolve": 10,
+          "morality": 5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Each rung of the ladder threatens to tear from the wall. The city groans beneath me. But I reach the top."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Malakor pulls himself up behind me. 'We're above the quarantine zone now. The throne room should be... there.'"
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The stairs crumble behind us with each step. There's no going back. Below, the quarantine ward stretches out in rows of sealed cells."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Malakor reads the plaques on the cells. Names. Ages. Some as young as five. His hands are trembling."
+        }
+      ]
+    },
+    "1a2b": {
+      "title": "The High Treasury",
+      "bg_image": "bg_1a2b_high_treasury.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I climb past the ruined guard stations. A beautiful marble spiral staircase leads up into a tower overflowing with gold coins and silk banners."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "This is the king's personal treasury. More wealth than a hundred families could spend in a lifetime. All sealed away while people starved."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "On the king's writing desk, a leather journal sits open. The final entry reads: 'They don't understand. The quarantine was necessary.'"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The journal explains everything. The plague, the lockdown, the king's desperate calculations. The gold weighs nothing compared to these words."
+        }
+      ],
+      "choice_a": {
+        "text": "Take the gold. It's practical, and I've earned my survival.",
+        "next_node": "ending_1",
+        "stat_changes": {
+          "hp": 5,
+          "resolve": 10,
+          "morality": -10
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "choice_b": {
+        "text": "Take only the journal. The truth is worth more than gold.",
+        "next_node": "ending_1",
+        "stat_changes": {
+          "hp": -5,
+          "resolve": 5,
+          "morality": 5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I fill my pack with gold coins. They're heavier than I expected. Each one stamped with the king's face. A tyrant's smile."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The throne room door is just ahead. The gold clinks with every step. It sounds like chains."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I slip the journal into my coat. The gold glimmers around me, untouched. It means nothing now."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The king's words burn into my mind. He chose to sacrifice hundreds to save thousands. Was it justified? I need to see the throne room."
+        }
+      ]
+    },
+    "1b1a": {
+      "title": "The Flooded Sluice",
+      "bg_image": "bg_1b1a_flooded_sluice.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The stolen water keeps us moving, but my conscience is heavy. Hugo's crying face haunts me."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "We've reached a massive drainage waterfall dropping into a dark whirlpool. The only way forward is across the slick stone ledge."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Kira is too weak to swim. If I slip, we both die. But staying here means the dehydration catches up anyway."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The ledge is narrow. Maybe two feet wide. Below, the water churns black and violent. Above, the exit is barely visible through the spray."
+        }
+      ],
+      "choice_a": {
+        "text": "Risk the crossing now while we still have the water's energy.",
+        "next_node": "ending_3",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": 5,
+          "morality": -5
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Rest and search for a safer route along the sluice walls.",
+        "next_node": "ending_3",
+        "stat_changes": {
+          "hp": -15,
+          "resolve": 10,
+          "morality": 5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I step onto the ledge. Water sprays into my face. My foot slips. I catch myself. Kira screams behind me."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "One step at a time. The stone is slick. The roar of the waterfall deafens me. But the exit grows closer."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I scan the walls. Behind a curtain of moss, there's an old maintenance walkway. Narrow, but drier than the ledge."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The walkway adds an hour. My dehydration worsens. But Kira makes it across without incident. The exit is ahead."
+        }
+      ]
+    },
+    "1b1b": {
+      "title": "The Desolate Greenhouse",
+      "bg_image": "bg_1b1b_desolate_greenhouse.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Completely dehydrated... my limbs feel like lead. We drag ourselves through a broken glass dome filled with dead soil and gray fog."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The greenhouse must have been beautiful once. Now the plants are ash-gray, crumbling at the touch."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "On the ground, a small wooden toy. A carved horse. A child played here once. Before everything ended."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Kira collapses. She's barely conscious. The exit is visible through the fog, but it's far. So far."
+        }
+      ],
+      "choice_a": {
+        "text": "Focus on the exit. Leave the toy. There's no time for sentiment.",
+        "next_node": "ending_4",
+        "stat_changes": {
+          "hp": -5,
+          "resolve": -5,
+          "morality": -10
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Search the greenhouse for any trace of who left the toy behind.",
+        "next_node": "ending_4",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": -10,
+          "morality": 10
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I leave the toy in the dirt. Kira leans on my shoulder. We shuffle forward. Each step is agony."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The exit grows closer. The fog thins. Fresh air hits my face. We're going to survive. We're going to make it out."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I search between the dead rows. Under a collapsed shelf, a family photo. A mother, a father, a child holding the wooden horse."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "They were real. This family. They lived and loved here. I tuck the photo into my coat. Kira stirs. The exit is through the fog."
+        }
+      ]
+    },
+    "1b2a": {
+      "title": "The Archivist's Study",
+      "bg_image": "bg_1b2a_archivists_study.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "My pack is loaded down with stolen records. Every step echoes with the weight of other people's lives."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I navigate through an abandoned administrative station covered in spilled black ink wells. The documents smear against my fingers."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "On the wall, a portrait of Elian. The archivist I abandoned at the gates. His painted eyes seem to follow me."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "He would have loved to read these. Instead, I'm smuggling them out to be sold. The tunnel exit glows ahead."
+        }
+      ],
+      "choice_a": {
+        "text": "Keep the records and head for the exit. A deal is a deal.",
+        "next_node": "ending_4",
+        "stat_changes": {
+          "hp": 5,
+          "resolve": 10,
+          "morality": -10
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "choice_b": {
+        "text": "Destroy the records here. No one should profit from their suffering.",
+        "next_node": "ending_4",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": -5,
+          "morality": 15
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I adjust the pack and head for the exit. The ink on my hands dries black. Permanent. Like what I've done."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Sylas is waiting at the tunnel mouth. He grins when he sees the bulging pack. 'Told you it'd be worth it.'"
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I tip the ink wells onto the documents. The paper soaks through. Names blur into nothing. Faces dissolve."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Sylas stares at me from the exit. His grin is gone. 'You just burned our retirement.' I walk past him without a word."
+        }
+      ]
+    },
+    "1b2b": {
+      "title": "The Furnace Chamber",
+      "bg_image": "bg_1b2b_furnace_chamber.png",
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The smoke is thick from the burning records, but the names are safe now. No one can be blackmailed. No lives can be destroyed."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I find a cold industrial foundry. The furnace still glows faintly. The heat is the only warmth I've felt in hours."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The furnace controls are still active. One lever could incinerate everything remaining in the vault. Or I could leave it for others to decide."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "My body is failing. Every breath is effort. But this choice matters. What happens to Aethelgard's secrets after I leave?"
+        }
+      ],
+      "choice_a": {
+        "text": "Use the furnace to destroy all remaining records and evidence.",
+        "next_node": "ending_3",
+        "stat_changes": {
+          "hp": -10,
+          "resolve": -5,
+          "morality": 15
+        },
+        "char_expression": "ch_mc_exhausted.png"
+      },
+      "choice_b": {
+        "text": "Leave the furnace and let the world decide what to do with the truth.",
+        "next_node": "ending_3",
+        "stat_changes": {
+          "hp": -5,
+          "resolve": -5,
+          "morality": -5
+        },
+        "char_expression": "ch_mc_focused.png"
+      },
+      "post_choice_a": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "*CLANG* The furnace roars to life. The remaining documents curl and blacken. The chamber fills with ash."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "Every secret, every name, every record of what happened here... gone. The outside world will never know the full truth."
+        }
+      ],
+      "post_choice_b": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I leave the furnace cold. The documents sit in their shelves, waiting. Maybe someday someone braver will come."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Or maybe someone worse will find them. I can't control that anymore. I've done what I could. The exit is through the cliff wall."
+        }
+      ]
+    },
+    "ending_1": {
+      "title": "Ending 1: The Throne of Isolation",
+      "bg_image": "bg_ending_1_throne.png",
+      "is_ending": true,
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_base.png",
+          "text": "I stand alone inside the vacant throne room. The marble floor gleams. Not a speck of dust. The king maintained this room while his people starved."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "On the throne's armrest, a final inscription: 'A king protects his crown first. The people are the crown.'"
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I survived. I'm wealthy. I know the truth. But every choice I made mirrored the king's pragmatism. I chose myself, every time."
+        },
+        {
+          "speaker": "narration",
+          "text": "You escape Aethelgard rich, experienced, and alive. But looking at your reflection in the throne's polished gold, you see the king's face staring back. You survived. But at what cost to who you are? ENDING 1 of 4."
+        }
+      ]
+    },
+    "ending_2": {
+      "title": "Ending 2: The Burden of Truth",
+      "bg_image": "bg_ending_2_quarantine.png",
+      "is_ending": true,
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The containment logs don't lie. The kingdom locked itself from the inside to protect the outer continents from a contagious psychological madness."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "The king sacrificed hundreds to save thousands. It was monstrous. It was necessary. Both things are true."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "I could leave. Tell the world. But who would believe me? And if they did, they'd come here with armies and weapons. The madness might still linger."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_focused.png",
+          "text": "I pull the structural levers. The quarantine seals engage. The vault doors lock from within. I am the new guardian."
+        },
+        {
+          "speaker": "narration",
+          "text": "You choose to remain behind, permanently sealing the quarantine gates. The truth of Aethelgard dies with you, but the world outside remains safe. A noble, tragic sacrifice. ENDING 2 of 4."
+        }
+      ]
+    },
+    "ending_3": {
+      "title": "Ending 3: The Martyr's Legacy",
+      "bg_image": "bg_ending_3_martyr.png",
+      "is_ending": true,
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "The sunrise over the valley... it's beautiful. I can't feel my legs anymore. But the survivors made it out."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "Every moral choice I made cost me something physical. Every life I saved drained mine. And now my body is done."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_base.png",
+          "text": "It's alright. The sun feels warm. For the first time in days, I'm not afraid. The others will make it. That's enough."
+        },
+        {
+          "speaker": "narration",
+          "text": "You collapse at the threshold of the valley exit. Your wounds are fatal, but the survivors you protected will live. They will sing songs of a nameless hero who asked for nothing in return. You will never hear them. ENDING 3 of 4."
+        }
+      ]
+    },
+    "ending_4": {
+      "title": "Ending 4: The Hollow Survivor",
+      "bg_image": "bg_ending_4_hollow.png",
+      "is_ending": true,
+      "dialogue_sequence": [
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_base.png",
+          "text": "Out of the drainage pipes and into the forest fog. I'm safe. My health is intact. My resolve is steady."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_exhausted.png",
+          "text": "But what did I actually accomplish? The mystery of Aethelgard remains unsolved. The corrupt people I enabled are out there, somewhere."
+        },
+        {
+          "speaker": "mc",
+          "expression": "ch_mc_base.png",
+          "text": "Hugo's water. Elian's archives. Kira's herbs. Malakor's knowledge. I let them all slip away because it was easier than fighting for them."
+        },
+        {
+          "speaker": "narration",
+          "text": "You escape Aethelgard with full health and empty hands. You avoided every conflict, enabled every selfish person, and preserved only yourself. The weight of your inaction will follow you forever. ENDING 4 of 4."
+        }
+      ]
+    }
+  }
+}

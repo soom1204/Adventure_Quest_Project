@@ -1,0 +1,1 @@
+# Aethelgard game support package.
